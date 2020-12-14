@@ -2,7 +2,7 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo-se/aws-comprehend)
 
-This Vonage API's Amazon Comprehend connector allows transcriptions created from your deployed Vonage API connectors and from your Vonage API applications to be sentiment analyzed by AWS Comprehend.
+This Vonage API's Amazon Comprehend connector allows transcriptions created from your deployed Vonage API connectors and from your Vonage API applications to be sentiment analyzed by AWS Comprehend. Multiple languages are supported.
 
 ## Amazon Comprehend connector
 
