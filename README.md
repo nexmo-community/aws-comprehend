@@ -24,11 +24,12 @@ Your Vonage API application uses HTTP POST to the connector address with the fol
 	- _**webhook_url**_ (e.g. https://my_server.my_company.com:32000/sentiment_score) where the sentiment scores will be posted by the connector to your Vonage API application,
 	- _**language**_ (e.g. en), which defines the transcription language as listed [here](https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html),
 - Your application may send/use any additional query parameter names and values for your application logic needs, except it **may not** use/send the following reserved query parameter names:
+	- _**sentiment**_,
 	- _**text**_,
 	- _**service**_.
 
 A few seconds later, the connector posts back to your Vonage API application webhook_url a JSON formatted payload (in the body of an HTTP POST):</br>
-	- the _**"sentiment"**_,</br>
+	- the _**"sentiment"**_, i.e. sentiment results,</br>
 	- the _**"text"**_,</br>
 	- the name of the _**"service"**_, which is "AWS Comprehend" in this case,</br> 
 	- and all other values sent as query parameters of the original request to the connector, e.g. _**"webhook_url"**_, _**"language"**_, and any additional query parameters that have been sent in the original HTTP POST.</br>
