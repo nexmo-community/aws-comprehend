@@ -16,7 +16,7 @@ To find your Access Key and Secret Access Key:
 - Find the Access Credentials section, and copy the latest Access Key ID.
 - Click on the Show link in the same row, and copy the Secret Access Key.
 
-## How to install and use this connector
+## How to use this connector
 
 Your Vonage API application uses HTTP POST to the connector address with the follwing requirements:
 - The text to be sentiment analyzed is sent as a _**"text"**_ element in a JSON formatted payload in the HTTP POST body, not as a query parameter! Thus your application must set the header "Content-Type:application/json",
