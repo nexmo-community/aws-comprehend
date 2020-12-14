@@ -19,7 +19,7 @@ To find your Access Key and Secret Access Key:
 ## How to install and use this connector
 
 Your Vonage API application uses HTTP POST to the connector address with the follwing requirements:
-- The text to be sentiment analyzed is sent as a _**"text"**_ element in a JSON formatted payload in the HTTP POST body, not as a query parameter! Thus your application must set the header Content-Type:application/json",
+- The text to be sentiment analyzed is sent as a _**"text"**_ element in a JSON formatted payload in the HTTP POST body, not as a query parameter! Thus your application must set the header "Content-Type:application/json",
 - Must include at least the following query parameters:
 	- _**webhook_url**_ (e.g. https://my_server.my_company.com:32000/sentiment_score) where the sentiment scores will be posted by the connector to your Vonage API application,
 	- _**language**_ (e.g. en), which defines the transcription language as listed [here](https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html),
