@@ -2,7 +2,7 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo-se/aws-comprehend)
 
-This Vonage API's Amazon Comprehend connector allows transcriptions created from Vonage API connectors to be sentiment analyzed by AWS Comprehend
+This Vonage API's Amazon Comprehend connector allows transcriptions created from Vonage API connectors to be sentiment analyzed by AWS Comprehend.
 
 ## Amazon Comprehend connector
 
@@ -18,19 +18,19 @@ To find your Access Key and Secret Access Key:
 
 ## How to install and use this connector
 
-Your Vonage Voice API application uses HTTP POST to the connector address with the follwing requirements:
-- The text to be sentiment analyzed is sent as "text" element in the HTTP POST body,
+Your Vonage API application uses HTTP POST to the connector address with the follwing requirements:
+- The text to be sentiment analyzed is sent as _**"text"**_ element in the HTTP POST body, not as a query parameter!
 - Must include at least the following query parameters:
-	- _**webhook_url**_ (e.g. https://my_server.my_company.com:32000/sentiment_score) where the sentiment scores will be posted by the connector
-	- _**language**_ (e.g. en), which defines the transcription language as listed [here](https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html)
+	- _**webhook_url**_ (e.g. https://my_server.my_company.com:32000/sentiment_score) where the sentiment scores will be posted by the connector to your Vonage API application,
+	- _**language**_ (e.g. en), which defines the transcription language as listed [here](https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html),
 - Your application may send/use any additional query parameter names and values for your application logic needs, except it **may not** use/send the following reserved query parameter names:
-	- _**text**_
-	- _**service**_ 
+	- _**text**_,
+	- _**service**_.
 
-A few seconds later, the connector posts back to your Vonage Voice API application webhook_url a JSON formatted payload (in the body of an HTTP POST):</br>
+A few seconds later, the connector posts back to your Vonage API application webhook_url a JSON formatted payload (in the body of an HTTP POST):</br>
 	- the _**"sentiment"**_,</br>
 	- the name of the _**"service"**_, which is "AWS Comprehend" in this case,</br> 
-	- and all other values sent as query parameters of the original request to the connector, e.g. _**"webhook_url"**_, _**"language"**_, and any additional query parameters that have been sent in the original HTTP POST</br>
+	- and all other values sent as query parameters of the original request to the connector, e.g. _**"webhook_url"**_, _**"language"**_, and any additional query parameters that have been sent in the original HTTP POST.</br>
 
 ## Running Comprehend connector
 
