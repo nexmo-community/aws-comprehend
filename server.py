@@ -392,7 +392,7 @@ class SentimentHandler(tornado.web.RequestHandler):
 
         #------------------
 
-        self.payload = '{"sentiment": ' + json.dumps(self.sentiment) + ', ' + self.payload[1:]
+        self.payload = '{"sentiment": ' + json.dumps(self.sentiment) + ', "text": "' + self.text + '", ' + self.payload[1:]
 
         self.payload =  self.payload[:-1] + ', "service": "AWS Comprehend"}'
 

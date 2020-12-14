@@ -29,6 +29,7 @@ Your Vonage API application uses HTTP POST to the connector address with the fol
 
 A few seconds later, the connector posts back to your Vonage API application webhook_url a JSON formatted payload (in the body of an HTTP POST):</br>
 	- the _**"sentiment"**_,</br>
+	- the _**"text"**_,</br>
 	- the name of the _**"service"**_, which is "AWS Comprehend" in this case,</br> 
 	- and all other values sent as query parameters of the original request to the connector, e.g. _**"webhook_url"**_, _**"language"**_, and any additional query parameters that have been sent in the original HTTP POST.</br>
 
