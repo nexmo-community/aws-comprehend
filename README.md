@@ -49,7 +49,7 @@ Edit `.env` file,<br/>
 set the 3 first parameters with their respective values retrieved from your AWS account,<br/>
 set the `PORT` value where websockets connections will be established.
 
-Launch the Transcribe & Comprehend connector as a Docker instance:
+Launch the Comprehend connector as a Docker instance:
 
 ```bash
 docker-compose up
@@ -80,7 +80,7 @@ Launch the connector service:
 python server.py
 ```
 
-Your server's public hostname and port will be used by your Vonage Voice API application as the address to where to submit the transcription request `https://<serverhostname>:<port>/transcribe`, e.g. `https://abcdef123456.ngrok.io/sentiment`
+Your server's public hostname and port will be used by your Vonage Voice API application as the address to where to submit the transcription request `https://<serverhostname>:<port>/sentiment`, e.g. `https://abcdef123456.ngrok.io/sentiment`
 
 ### Command Line Heroku deployment
 
