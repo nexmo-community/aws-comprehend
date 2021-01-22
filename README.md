@@ -114,3 +114,17 @@ On your Heroku dashboard where your connector application page is shown, click o
 Click the 'Deploy to Heroku' button at the top of this page, and follow the instructions to enter your Heroku application name and the 3 AWS parameter respective values retrieved from your AWS account.
 
 Once deployed, on the Heroku dashboard where your connector application page is shown, click on `Open App` button, that URL will be the one to be used by your Vonage API application as where to submit the HTTP POST, e.g. `https://myappname.herokuapp.com/sentiment`.
+
+### Quick test
+
+Quickly test your connector as follows:</br>
+- Have your sample text to be sentiment analyzed</br>
+- Have your deployed connector server URL, e.g. https://myapp.herokuapp.com/sentiment</br>
+- Have the webhook call back URL to your client application, e.g. https://xxxx.ngrok.io/transcript</br>
+
+Test the transcription using this curl command:</br>
+
+```bash
+curl -X POST "https://myapp.herokuapp.com/sentiment?webhook_url=https://xxxx.ngrok.io/sentiment_score&entity=customer&id=abcd&language_code=en" -d '{"text": "You provide such a fantastic service! I am a very happy customer!", "foo": "bar"}'
+```
+A JSON formatted response will be posted to the _webhook_url_ URL, including the sentiment score, all custom query parameters, and sent JSON payload parameters needed by your application logic from the original POST request.
