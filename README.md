@@ -84,6 +84,12 @@ Your server's public hostname and port will be used by your Vonage API applicati
 
 ### Command Line Heroku deployment
 
+Install [git](https://git-scm.com/downloads).
+
+Install [Heroku command line](https://devcenter.heroku.com/categories/command-line) and login to your Heroku account.
+
+Download this sample application code to a local folder, then go to that folder.
+
 If you do not yet have a local git repository, create one:</br>
 ```bash
 git init
