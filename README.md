@@ -47,14 +47,15 @@ cp .env.example .env
 
 Edit `.env` file,<br/>
 set the 3 first parameters with their respective values retrieved from your AWS account,<br/>
-set the `PORT` value where websockets connections will be established.
+set the `PORT` value (e.g. *5000*) where websockets connections will be established.
+The `PORT` value needs to be the same as specified in `Dockerfile` and `docker-compose.yml` files.
 
-Launch the Comprehend connector as a Docker instance:
+Launch the Comprehend connector as a docker container instance:
 
 ```bash
 docker-compose up
 ```
-Your Docker container's public hostname and port will be used by your Vonage API application as the address to where to submit the transcription request `https://<docker_host_name>:<proxy_port>/sentiment`, e.g. `https://myserver.mydomain.com:40000/sentiment`
+Your docker container's public hostname and port will be used by your Vonage API application as the address to where to submit the transcription request `https://<docker_host_name>:<proxy_port>/sentiment`, e.g. `https://myserver.mydomain.com:40000/sentiment`
 
 ### Local deployment
 
