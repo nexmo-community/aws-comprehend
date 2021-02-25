@@ -47,7 +47,7 @@ cp .env.example .env
 
 Edit `.env` file,<br/>
 set the 3 first parameters with their respective values retrieved from your AWS account,<br/>
-set the `PORT` value (e.g. *5000*) where websockets connections will be established.
+set the `PORT` value (e.g. *5000*) where sentiment analysis requests will be received.
 The `PORT` value needs to be the same as specified in `Dockerfile` and `docker-compose.yml` files.
 
 Launch the Comprehend connector as a docker container instance:
@@ -69,7 +69,7 @@ cp .env.example .env
 
 Edit `.env` file,<br/>
 set the 3 first parameters with their respective values retrieved from your AWS account,<br/>
-set the `PORT` value where http connections will be established.
+set the `PORT` value where sentiment analysis requests will be received.
 
 Install dependencies once:
 ```bash
@@ -114,13 +114,13 @@ AWS_DEFAULT_REGION</br>
 git push heroku master
 ```
 
-On your Heroku dashboard where your connector application page is shown, click on `Open App` button, that URL will be the one to be used by your Vonage API application as where to submit the HTTP POST, e.g. `https://myappname.herokuapp.com/sentiment`.
+On your Heroku dashboard where your connector application page is shown, click on `Open App` button, that URL will be the one to be used by your Vonage API or Vonage Messages API application to submit sentiment analysis requests, e.g. `https://myappname.herokuapp.com/sentiment`.
 
 ### 1-click Heroku deployment
 
 Click the 'Deploy to Heroku' button at the top of this page, and follow the instructions to enter your Heroku application name and the 3 AWS parameter respective values retrieved from your AWS account.
 
-Once deployed, on the Heroku dashboard where your connector application page is shown, click on `Open App` button, that URL will be the one to be used by your Vonage API application as where to submit the HTTP POST, e.g. `https://myappname.herokuapp.com/sentiment`.
+Once deployed, on the Heroku dashboard where your connector application page is shown, click on `Open App` button, that URL followed by `/sentiment` will be the one to be used by your Vonage API application as where to submit the HTTP POST, e.g. `https://myappname.herokuapp.com/sentiment`.
 
 ### Quick test
 
