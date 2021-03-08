@@ -1,6 +1,6 @@
 # Amazon Comprehend reference connection for transcriptions created from Vonage API reference connections and messages from Vonage API applications
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo-se/aws-comprehend)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo-community/aws-comprehend)
 
 This Vonage API's Amazon Comprehend reference connection allows transcriptions created from your deployed Vonage API reference connections and messages from your Vonage API applications to be sentiment analyzed by AWS Comprehend. Multiple languages are supported.
 
