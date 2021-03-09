@@ -2,7 +2,7 @@
   "name": "Vonage API platform connector to Amazon Comprehend",
   "description": "This connector allows transcriptions created from Vonage connectors to be sentiment analyzed by AWS Comprehend",
   "keywords": ["comprehend", "sentiment analysis", "python", "amazon web services", "vonage"],
-  "repository": "https://github.com/nexmo-se/aws-comprehend",
+  "repository": "https://github.com/nexmo-community/aws-comprehend",
   "env":{
     "AWS_ACCESS_KEY_ID": {
         "description": "Retrieved from your security credentials on AWS console",
